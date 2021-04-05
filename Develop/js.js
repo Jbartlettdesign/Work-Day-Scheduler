@@ -100,10 +100,7 @@ else{
 }
 }
 hoursInTheDay();
-
-var loadTasks = function() {
-    tasks = JSON.parse(localStorage.getItem("tasks"));
-};
+ 
 
 var saveTasks = function(input) {
     localStorage.setItem("tasks", JSON.stringify(input));
@@ -111,67 +108,109 @@ var saveTasks = function(input) {
 
 
 
-var former = document.querySelector("#str0");
-    former.addEventListener('submit', function (e){
+var former0 = document.querySelector("#str0");
+    former0.addEventListener('submit', function (e){
     e.preventDefault();
     var tempValue = document.getElementById("text0").value;
     tasks.one = tempValue;
-    saveTasks(tasks);
-    console.log(tasks)});
+    saveTasks(tasks)});
     //////////////1*/
     
-    var former = document.querySelector("#str1");
-    former.addEventListener('submit', function (e){
+    var former1 = document.querySelector("#str1");
+    former1.addEventListener('submit', function (e){
     e.preventDefault();
     var tempValue = document.getElementById("text1").value;
-    console.log(tasks);
-    saveTasks(tempValue)});
+    tasks.two = tempValue;
+    saveTasks(tasks)});
 //////////////////////2*/
-var former = document.querySelector("#str2");
-former.addEventListener('submit', function (e){
+var former2 = document.querySelector("#str2");
+former2.addEventListener('submit', function (e){
     e.preventDefault();
     var tempValue = document.getElementById("text2").value;
+    tasks.three = tempValue;
     saveTasks(tasks);
-console.log(tempValue)});
+    });
 /////////////////////
-var former = document.querySelector("#str3");
-former.addEventListener('submit', function (e){
+var former3 = document.querySelector("#str3");
+former3.addEventListener('submit', function (e){
     e.preventDefault();
     var tempValue = document.getElementById("text3").value;
+    tasks.four = tempValue;
     saveTasks(tasks);
-    console.log(tempValue)});
+    });
 /////////////////////
-var former = document.querySelector("#str4");
-former.addEventListener('submit', function (e){
+var former4 = document.querySelector("#str4");
+former4.addEventListener('submit', function (e){
     e.preventDefault();
     var tempValue = document.getElementById("text4").value;
+    tasks.five = tempValue;
     saveTasks(tasks);
-    console.log(tempValue)});
+    });
 ///////////////////
-var former = document.querySelector("#str5");
-former.addEventListener('submit', function (e){
+var former5 = document.querySelector("#str5");
+former5.addEventListener('submit', function (e){
     e.preventDefault();
     var tempValue = document.getElementById("text5").value;
+    tasks.six = tempValue;
     saveTasks(tasks);
-    console.log(tempValue)});
+    });
 ///////////////////
-var former = document.querySelector("#str6");
-former.addEventListener('submit', function (e){
+var former6 = document.querySelector("#str6");
+former6.addEventListener('submit', function (e){
     e.preventDefault();
     var tempValue = document.getElementById("text6").value;
+    tasks.seven = tempValue;
     saveTasks(tasks);
-    console.log(tempValue)});
+    });
 //////////////
-var former = document.querySelector("#str7");
-former.addEventListener('submit', function (e){
+var former7 = document.querySelector("#str7");
+former7.addEventListener('submit', function (e){
     e.preventDefault();
     var tempValue = document.getElementById("text7").value;
+    tasks.eight = tempValue;
     saveTasks(tasks);
-    console.log(tempValue)});
+    });
 //////////////////
-var former = document.querySelector("#str8");
-former.addEventListener('submit', function (e){
+var former8 = document.querySelector("#str8");
+former8.addEventListener('submit', function (e){
     e.preventDefault();
     var tempValue = document.getElementById("text8").value;
+    tasks.nine = tempValue;
     saveTasks(tasks);
-    console.log(tempValue)});
+    });
+    
+function loadTasks() {
+    
+    newTasks = JSON.parse(localStorage.getItem("tasks"));
+    console.log(newTasks);
+    if(newTasks !=null){
+        tasks = newTasks;
+    var tempValue = document.getElementById("text0");
+    tempValue.value = newTasks.one;
+
+    var tempValue = document.getElementById("text1");
+    tempValue.value = newTasks.two;
+
+    var tempValue = document.getElementById("text2");
+    tempValue.value = newTasks.three;
+
+    var tempValue = document.getElementById("text3");
+    tempValue.value = newTasks.four;
+
+    var tempValue = document.getElementById("text4");
+    tempValue.value = newTasks.five;
+
+    var tempValue = document.getElementById("text5");
+    tempValue.value = newTasks.six;
+
+    var tempValue = document.getElementById("text6");
+    tempValue.value = newTasks.seven;
+
+    var tempValue = document.getElementById("text7");
+    tempValue.value = newTasks.eight;
+
+    var tempValue = document.getElementById("text8");
+    tempValue.value = newTasks.nine;
+}};
+
+loadTasks();
