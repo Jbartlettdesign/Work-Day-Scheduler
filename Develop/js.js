@@ -65,7 +65,7 @@ setTime = setTime.format();
 timerContainer.text(setTimeTest);
 /*we determined what the current time is here, currentHour is the moment()*/
 if(currentHourRightNow === setTimeTest && hourCheck){
-    timerContainer.addClass("present");
+    //timerContainer.addClass("present");
     infoContainer.addClass("present");
     console.log("present");
     console.log(setTimeTest);
@@ -73,13 +73,13 @@ if(currentHourRightNow === setTimeTest && hourCheck){
     hourCheck = false;
     }
 else if(moment(currentHour).isAfter(setTime)){
-    timerContainer.addClass("past");
+    //timerContainer.addClass("past");
     infoContainer.addClass("past");
     console.log("past");
     //console.log(currentHour);
 }
 else if(moment(currentHour).isBefore(setTime)){
-    timerContainer.addClass("future");
+    //timerContainer.addClass("future");
     infoContainer.addClass("future");
     console.log("future");
     console.log(currentHour);
